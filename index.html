@@ -28,7 +28,94 @@
 
             <h4>A visual studio code projektekről nem gondoltam külön beszélni mivel technikailag az egész portfólió bemutatja</h4>
          </article>
-     <ul>
+ 
+         <body>
+            <!-- Kő-Papír-Olló Játék -->
+            <div class="container">
+                <h1>Kő-Papír-Olló</h1>
+                <div class="buttons">
+                    <button onclick="playGame('rock')">Kő</button>
+                    <button onclick="playGame('paper')">Papír</button>
+                    <button onclick="playGame('scissors')">Olló</button>
+                </div>
+                <div id="result"></div>
+            </div>
+        
+            <!-- Félkarú Rabló Játék -->
+            <div class="container">
+                <h1>Félkarú Rabló</h1>
+                <div class="slot-container">
+                    <div class="slot" id="slot1">🍒</div>
+                    <div class="slot" id="slot2">🍒</div>
+                    <div class="slot" id="slot3">🍒</div>
+                </div>
+                <div class="buttons">
+                    <button onclick="spin()">Pörget</button>
+                </div>
+                <div id="slot-result"></div>
+            </div>
+        
+            <script>
+                // Kő-Papír-Olló Játék
+                function playGame(playerChoice) {
+                    const choices = ['rock', 'paper', 'scissors'];
+                    const computerChoice = choices[Math.floor(Math.random() * 3)];
+                    let result = '';
+        
+                    if (playerChoice === computerChoice) {
+                        result = 'Döntetlen!';
+                    } else if (
+                        (playerChoice === 'rock' && computerChoice === 'scissors') ||
+                        (playerChoice === 'paper' && computerChoice === 'rock') ||
+                        (playerChoice === 'scissors' && computerChoice === 'paper')
+                    ) {
+                        result = 'Nyertél!';
+                    } else {
+                        result = 'Vesztettél!';
+                    }
+        
+                    document.getElementById('result').innerHTML = `
+                        Te választottál: ${translateChoice(playerChoice)}<br>
+                        Számítógép választott: ${translateChoice(computerChoice)}<br>
+                        Eredmény: ${result}
+                    `;
+                }
+        
+                function translateChoice(choice) {
+                    switch(choice) {
+                        case 'rock':
+                            return 'Kő';
+                        case 'paper':
+                            return 'Papír';
+                        case 'scissors':
+                            return 'Olló';
+                        default:
+                            return '';
+                    }
+                }
+        
+                // Félkarú Rabló Játék
+                function spin() {
+                    const symbols = ['🍒', '🍋', '🍉', '🍇', '⭐', '🔔'];
+                    const slot1 = symbols[Math.floor(Math.random() * symbols.length)];
+                    const slot2 = symbols[Math.floor(Math.random() * symbols.length)];
+                    const slot3 = symbols[Math.floor(Math.random() * symbols.length)];
+        
+                    document.getElementById('slot1').innerText = slot1;
+                    document.getElementById('slot2').innerText = slot2;
+                    document.getElementById('slot3').innerText = slot3;
+        
+                    let result = '';
+                    if (slot1 === slot2 && slot2 === slot3) {
+                        result = 'Nyeremény! 🎉';
+                    } else {
+                        result = 'Próbáld újra!';
+                    }
+        
+                    document.getElementById('slot-result').innerText = result;
+                }
+            </script>
+      <ul>
 <li>Az Email címem: szabo.reka.23f@szlgbp.hu</li>
 <li><a href="http://szlgbp.hu/" target="_blank">Az SZLGBP honlapja</a></li>
      </ul>
