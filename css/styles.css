@@ -1,0 +1,117 @@
+body {
+   
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    background-color: #CBE4DE;
+    color: #284343;
+    font-family: "Josefin Sans", sans-serif;
+
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+/* felirat */
+nav ul li a {
+    color: #C1F1F5;
+    text-decoration: none;
+    font-family: "Josefin Sans", sans-serif;
+
+}
+
+main {
+    padding: 3rem;
+    color:hsb(239, 88, 19)
+
+}
+
+header {
+    background: #284343;
+    text-align: center;
+    font-family: "Josefin Sans", sans-serif;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 4.5rem;
+}
+.content {
+    margin-top: 6rem; 
+}
+footer {
+    background: #284343;
+    color: #C1F1F5;
+    text-align: center;
+    padding: 0.3rem 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 100; 
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.container {
+    text-align: center;
+    font-family: "Josefin Sans", sans-serif;
+
+}
+img {
+    max-width: 70%;
+    height: auto;
+    margin: auto;
+ 
+}
+
+.video-iframe {
+    max-width: 100%; 
+    width: 60vw; 
+    height: auto;
+    border: none; 
+    position: relative;
+    left: 2rem; 
+}
+
+table{
+    width: 70%;
+    text-align: center;
+    justify-content: center; 
+    align-items: center; 
+    font-size: 1.5em;
+}
+video {
+    max-width: 100%;
+    height: auto; 
+    display: block;
+    margin: 0 auto; 
+}
+/* Responsive design */
+@media (max-width: 80%) {
+    nav ul li {
+        display: block;
+        justify-content: center; 
+    }
+}
+/*betűtípus*/
+.josefin-sans-regular {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .josefin-sans-bold {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+  }
